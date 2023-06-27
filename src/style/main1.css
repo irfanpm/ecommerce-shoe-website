@@ -1,0 +1,26 @@
+.wallpaper{
+    background: url('https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-hero-image-bg.jpg');
+    background-position: center center;
+    background-size:cover;
+
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    
+
+}
+
+.maintext{
+    font-size: 70px;
+    font-weight: 100;
+    color: azure;
+    font-family: sans-serif;
+    
+}
+
+.home_des{
+    position: relative;
+    top: 250px;
+    left: 40%;
+
+}
