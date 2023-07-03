@@ -15,6 +15,13 @@ import Nav from './component/nav'
 import Counter from './component/counter'
 import Payment from './pages/webpage/paymentsection'
 import Admin from './admin/adminpages/adminmain'
+import Userlist from './admin/adminpages/userlist'
+import Productlist from './admin/adminpages/productlist'
+import Userdetails from './admin/adminpages/userdetails'
+import Productdetails from './admin/adminpages/productdetails'
+import Addproduct from './admin/adminpages/addproduct'
+
+
 
 
 
@@ -27,7 +34,7 @@ import Admin from './admin/adminpages/adminmain'
 
 function App() {
   const [userState,setuserState]=useState([])
-  const[product]=useState(Products)
+  const[product,setProduct]=useState(Products)
   const[userId,setId]=useState('')
 
 
@@ -35,7 +42,7 @@ function App() {
 
   return (
     <>
-    <Context.Provider value={{userState,setuserState,product,userId,setId}}>
+    <Context.Provider value={{userState,setuserState,product,userId,setId,setProduct}}>
 
     <Routes>
       <Route path='/login/' element={<Login/>}/>
@@ -50,7 +57,25 @@ function App() {
       <Route path='/nav/:id' element={< Nav/>}/>
       <Route path='/counter' element={< Counter/>}/>
       <Route path='/payment/:total' element={< Payment/>}/>
-      <Route path='/admin' element={< Admin/>}/>
+
+
+
+      <Route path='/admin' element={< Admin/>}>
+      <Route index element={< Userlist/>}/>
+       <Route path='userlist' element={< Userlist/>}/> 
+       <Route path='productlist' element={< Productlist/>}/> 
+       <Route path='userdetails/:user' element={< Userdetails/>}/> 
+       <Route path='productdetails/:prod' element={< Productdetails/>}/> 
+       <Route path='productdetails/:prod' element={< Productdetails/>}/> 
+       <Route path='addproduct'element={<Addproduct/>} />
+
+
+
+
+
+
+
+      </Route>
 
 
 

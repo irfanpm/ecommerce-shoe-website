@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import {Card,ListGroup,Form,Button} from 'react-bootstrap';
+import Nav from '../../component/nav';
+
 
 
 function paymentsection() {
@@ -12,6 +14,8 @@ function paymentsection() {
   let TotalAmount=0
   TotalAmount=value+shipping
   return (
+    <>
+    <Nav/>
     <div className=' container p-5 d-flex'>
       <div className=' col-md-6 mt-5'>
         <h3>order summery</h3><br />
@@ -59,7 +63,7 @@ function paymentsection() {
         <div>
 
         </div>
-    </div>
+    </div></>
   )
 }
 
