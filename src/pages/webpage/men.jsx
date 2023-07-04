@@ -21,19 +21,20 @@ const men = () => {
 
 
       </div>
-      <div className='d-flex gap-5 justify-content-center mt-5'>
+      <div className='container gap-5'>
+      <div className=' row '>
+
         {
           menshoe.map((x) => {
             return (
-              <div onClick={() => { nav(`/details/${x.id}`) }}>
-                <Card style={{ width: '28rem' }} >
+              <div onClick={() => { nav(`/details/${x.id}`) }} className='col-lg-4 col-6'>
+                <Card style={{ maxwidth: '48rem'  }} >
                   <Card.Img variant="top" src={x.Image} />
                   <Card.Body>
                     <Card.Title>{x.name}</Card.Title>
                     <Card.Text>
                      ${x.price}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
                   </Card.Body>
                 </Card> </div>)
 
@@ -43,6 +44,7 @@ const men = () => {
 
 
         }
+        </div>
       </div>
     </div>
   )

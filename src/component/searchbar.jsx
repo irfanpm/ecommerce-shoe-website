@@ -12,12 +12,21 @@ function searchbar() {
     // const dis = prod.filter((a,) => {
     //     return a.type == b
     // })
-    const click = (event) => {
-        event.preventDefault()
-        const b = event.target.sear.value
+    const search = (event) => {
+        const b = event.target.value
 
         var value = product.filter((a) => {
-            return a.type == b
+            
+            for(let i=0;i<10;i++){
+                console.log(a.name.charAt(i));
+                // console.log(b.charAt(i));
+
+            if( a.name.charAt(i) === b.charAt(i)){
+              let g=a.name.charAt(i)
+                return g
+            }
+           
+            }
         })
         setstate(value)
 
@@ -28,7 +37,8 @@ function searchbar() {
     return (
         <div>
 
-            <div className='d-flex'>   <form action="" onSubmit={click}>
+            <div className='d-flex'>  
+             <form action="" >
                 <h1 style={{ textAlign: 'center' }}>Search</h1>
 
                 <input type="text"
@@ -37,7 +47,7 @@ function searchbar() {
                         height: '50px',
                         borderRadius: '20px'
                     }}
-                    name="" id="sear" />
+                    name="" id="sear" onChange={search} />
                 <button
                     style={{
                         width: '70px',

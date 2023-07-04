@@ -16,9 +16,10 @@ function nav() {
   const nv = useNavigate()
  
   return (
-    <div>
-      <Navbar expand="lg" className="bg-body-tertiary" style={{ width: '100%' }}>
-        <Container fluid className='gap-5' >
+    <div className='row' >
+      <div className='col-md-12'>
+      <Navbar expand="lg" className="bg-body-tertiary" >
+        <Container fluid className='gap-5 ' >
           <Link to='/' style={{ textDecoration: 'none' }}><Navbar.Brand href="#"><h1>shoe</h1></Navbar.Brand></Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -30,8 +31,8 @@ function nav() {
               <Link to='/men' style={{ textDecoration: 'none' }}> <Nav.Link href="#action1" className='fs-5 fw-bold'>Men</Nav.Link></Link>
               <Link to='/women' style={{ textDecoration: 'none' }}> <Nav.Link href="#action2" className='fs-5 fw-bold' >Women</Nav.Link></Link>
               <Link to='/collection' style={{ textDecoration: 'none' }}> <Nav.Link href="#action2" className='fs-5 fw-bold' >Collection</Nav.Link></Link>
-              <Nav.Link href="#action2" className='fs-5 fw-bold' >LookBook</Nav.Link>
-              <Nav.Link href="#action2" className='fs-5 fw-bold' >Sale</Nav.Link>
+              <Nav.Link  className='fs-5 fw-bold' >LookBook</Nav.Link>
+              <Nav.Link  className='fs-5 fw-bold' >Sale</Nav.Link>
 
 
 
@@ -39,16 +40,16 @@ function nav() {
 
             </Nav>
             <Nav className=' gap-3'>
-              <Nav.Link href="#action2" className='fs-5 fw-bold' onClick={()=>nv(`/cart/${userId}`)}>cart</Nav.Link>
+              <Nav.Link  className='fs-5 fw-bold' onClick={()=> {userId!=''? nv(`/cart/${userId}`):alert('please login') }}>cart</Nav.Link>
                
             {  ( userId != '')?
 
-               <Nav.Link href="#action2" onClick={()=>{
+               <Nav.Link  onClick={()=>{
               nv('/login')
               setId(d=>d='')
 
                }} className='fs-5 fw-bold' >logout</Nav.Link>
-              : <Nav.Link href="#action2" onClick={()=>{
+              : <Nav.Link  onClick={()=>{
                 nv('/login')
   
                  }} className='fs-5 fw-bold' >login</Nav.Link> }
@@ -61,6 +62,7 @@ function nav() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      </div>
 
 
     </div>

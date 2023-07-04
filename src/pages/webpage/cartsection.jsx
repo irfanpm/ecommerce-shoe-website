@@ -55,6 +55,7 @@ function cartsection() {
     }
 
   }
+ 
 
   for (let i in userState) {
     if (userId == userState[i].id) {
@@ -131,11 +132,13 @@ function cartsection() {
       <div> <Nav /> </div>
 
       <h1 style={{ textAlign: 'center' }}>Cart</h1>
-      <div className='d-flex'>
+      <div className='container'>
+      <div className='row  '>
         {
 
           cartstate.map((cartvalue, cartindex) => {
-            return (<div className=' container '> <Card style={{ width: '28rem' }} >
+            return (
+            <div className='col-md-4 mt-3 text-center'> <Card  >
               <Card.Img variant="top" src={cartvalue.Image} />
               <Card.Body>
                 <Card.Title>{cartvalue.name}</Card.Title>
@@ -169,6 +172,7 @@ function cartsection() {
       
 
 
+      </div>
       </div>
 
     </div>)
