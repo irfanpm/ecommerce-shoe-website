@@ -1,9 +1,16 @@
 body,html,#root{
-    height: 100% !important;
+    height: 100% ;
  
     
 }
-body{
-    width: 100%;
+.hovereffect{
+    transition: all ;
+
+}
+.hovereffect:hover{
+    transform: scale(1.05);
     
+
+
+
 }

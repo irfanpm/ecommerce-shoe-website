@@ -34,13 +34,16 @@ function counter({ cartqty }) {
 
       }
 
-      }>-</button>
-      <h2 >{cartqty.qty}</h2><button onClick={() => {
-          setcount(count => count - 1)
+      }>+</button>
+      <h2 >{cartqty.qty}</h2>
+      {(cartqty.qty>1)?
+      <button onClick={() => {
+
+         setcount(count => count - 1)
         cartqty.qty = count
         nav(`/cart/${userId}`)
 
-      }}>-</button>
+      }}>-</button>:null}
 
     
       <br />

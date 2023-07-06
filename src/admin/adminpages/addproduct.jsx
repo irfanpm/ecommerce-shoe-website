@@ -30,8 +30,8 @@ function addproduct() {
   };
   return (
     <div>
-      <div className="mt-5">
-        <Card className="container   p-4  " style={{ width: "25rem" }}>
+      <div className=" container" >
+        <Card className="   p-4  " style={{ width: "25rem" }}>
           <h1 style={{ textAlign: "center" }}>Add product</h1> <br />
           <br />
           <form className="d-flex flex-column " onSubmit={submit}>

@@ -4,7 +4,7 @@ export const Products=[
         qty:1,
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-003-400x400.jpg',
-        name:'Women’s Blue Training',
+        name:'Womens Blue Training',
 
         price:200
         
@@ -14,7 +14,7 @@ export const Products=[
         qty:1,
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-003-400x400.jpg',
-        name:'Won’s Blue Training',
+        name:'Womens Blue Training',
         price:200,
         
     },
@@ -25,7 +25,7 @@ export const Products=[
         
         type:'men',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-005.jpg',
-        name:'Men’s Black Running',
+        name:'Mens Black Running',
         price:200
 
     },
@@ -35,7 +35,7 @@ export const Products=[
 
         type:'men',
         Image:'https://websitedemos.net/recycled-shoe-store-/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-019.jpg',
-        name:'Men’s Classic Blue',
+        name:'Mens Classic Blue',
         price:564,
     },
     {
@@ -43,7 +43,7 @@ export const Products=[
         qty:1,
         type:'men',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-020.jpg',
-        name:'Men’s Classic Mint',
+        name:'Mens Classic Mint',
         price:100,
 
 
@@ -55,7 +55,7 @@ export const Products=[
         type:'man',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-007.jpg',
         price:100,
-        name:'Men’s Green Running'
+        name:'Mens Green Running'
         ,top:'sale'
 
 
@@ -68,7 +68,7 @@ export const Products=[
         type:'men',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-006.jpg',
         price:100,
-        name:'Men’s Red Running'
+        name:'Mens Red Running'
         ,top:'sale'
 
 
@@ -81,7 +81,7 @@ export const Products=[
         type:'men',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-008.jpg',
         price:100,
-        name:'Men’s Navy Running'
+        name:'Mens Navy Running'
 
 
     }
@@ -150,6 +150,8 @@ export const Products=[
         type:'men',
         Image:'https://cdn.shopify.com/s/files/1/0160/7997/8544/products/new-balance-shoe-new-balance-womens-880v10-running-shoes-frost-cobalt-lime-glo-36270045561047_960x_0008414b-2e4b-41c0-981d-c077ded7ad95_500x.jpg?v=1644970628',
         price:100,
+        name:'timberwolf'
+
 
 
     }
@@ -160,7 +162,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-014-300x300.jpg',
         price:100,
-        name:'Women’s Candy City Run'
+        name:'Womens Candy City Run'
         ,top:'sale'
 
 
@@ -172,7 +174,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-013.jpg',
         price:100,
-        name:'Women’s Choco City Run'
+        name:'Womens Choco City Run'
 
 
     }
@@ -183,7 +185,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-015.jpg',
         price:100,
-        name:'Women’s Cream Suede'
+        name:'Womens Cream Suede'
         ,top:'sale'
 
 
@@ -195,7 +197,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-001.jpg',
         price:100,
-        name:'Women’s Green Training'
+        name:'Womens Green Training'
         ,top:'sale'
         
 
@@ -208,7 +210,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-010.jpg',
         price:100,
-        name:'Women’s Mint Sneaker'
+        name:'Womens Mint Sneaker'
 
 
     }
@@ -216,9 +218,10 @@ export const Products=[
     {
         id:20,
         qty:1,
-        type:'Women’s Mint Sneaker',
+        type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-010.jpg',
-        price:100
+        price:100,
+        name:'Womens Mint Sneaker'
         ,top:'sale'
 
 
@@ -227,7 +230,7 @@ export const Products=[
     {
         id:21,
         qty:1,
-        name:'Women’s Orange Sneaker',
+        name:'Womens Orange Sneaker',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-009.jpg',
         price:100,
         type:'women'
@@ -242,7 +245,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-004.jpg',
         price:100,
-        name:'Women’s Peach Training'
+        name:'Womens Peach Training'
         ,top:'sale'
 
 
@@ -254,7 +257,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-016.jpg',
         price:100,
-        name:'Women’s Pink Suede'
+        name:'Womens Pink Suede'
         ,top:'sale'
 
 
@@ -279,7 +282,7 @@ export const Products=[
         type:'women',
         Image:'https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-012.jpg',
         price:100,
-        name:'Women’s Tosca City Run'
+        name:'Womens Tosca City Run'
         ,top:'sale'
 
 

@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { Card, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { Context } from '../../context/context';
+import Footer from '../../component/footer';
+
 
 
 
@@ -25,13 +27,15 @@ const women = () => {
 
       </div>
       <div className='container gap-5'>
-        <div className='row'>
+        
+        <div className='row 'style={{background:' rgb(230, 230, 217)'}}>
+          <h1>Women</h1>
         {
           womenshoe.map((x) => {
             return (
-              <div onClick={() => { nav(`/details/${x.id}`) }} className='col-lg-4 col-6'>
+              <div onClick={() => { nav(`/details/${x.id}`) }} className='col-lg-4 col-6 mt-3'>
 
-                <Card style={{maxwidth: '48rem' }}>
+                <Card style={{maxwidth: '48rem' }}className='hovereffect' >
                   <Card.Img variant="top" src={x.Image} />
                   <Card.Body>
                     <Card.Title>{x.name}</Card.Title>
@@ -49,6 +53,7 @@ const women = () => {
         }
         </div>
       </div>
+      <Footer/>
 
 
     </div>

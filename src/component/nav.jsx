@@ -3,6 +3,8 @@ import { Navbar, Nav, Container, Form, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { useNavigate, useParams } from 'react-router-dom';
 import { Context } from '../context/context';
+import { BsCart } from "react-icons/bs";
+import Searchbar from './searchbar';
 
 
 
@@ -20,7 +22,7 @@ function nav() {
       <div className='col-md-12'>
       <Navbar expand="lg" className="bg-body-tertiary" >
         <Container fluid className='gap-5 ' >
-          <Link to='/' style={{ textDecoration: 'none' }}><Navbar.Brand href="#"><h1>shoe</h1></Navbar.Brand></Link>
+          <Link to='/' style={{ textDecoration: 'none' }}><Navbar.Brand href="#" className='fs-1 font-weight-bold' >Shoe Clan</Navbar.Brand></Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -31,16 +33,15 @@ function nav() {
               <Link to='/men' style={{ textDecoration: 'none' }}> <Nav.Link href="#action1" className='fs-5 fw-bold'>Men</Nav.Link></Link>
               <Link to='/women' style={{ textDecoration: 'none' }}> <Nav.Link href="#action2" className='fs-5 fw-bold' >Women</Nav.Link></Link>
               <Link to='/collection' style={{ textDecoration: 'none' }}> <Nav.Link href="#action2" className='fs-5 fw-bold' >Collection</Nav.Link></Link>
-              <Nav.Link  className='fs-5 fw-bold' >LookBook</Nav.Link>
-              <Nav.Link  className='fs-5 fw-bold' >Sale</Nav.Link>
-
-
+             
 
 
 
             </Nav>
             <Nav className=' gap-3'>
-              <Nav.Link  className='fs-5 fw-bold' onClick={()=> {userId!=''? nv(`/cart/${userId}`):alert('please login') }}>cart</Nav.Link>
+
+              <Searchbar/>
+              <Nav.Link  className='fs-5 fw-bold' onClick={()=> {userId!=''? nv(`/cart/${userId}`):alert('please login') }}> <BsCart className='fs-1'/> </Nav.Link>
                
             {  ( userId != '')?
 

@@ -28,11 +28,11 @@ function main1() {
                 tempor imperdiet arcu arcu ut nunc in dictum mauris at ut.
               </p>{" "}
               <br />
-              <button style={{ width: "150px", height: "60px" }}>
+              <button style={{ width: "150px", height: "60px" }}  onClick={()=>nav('/Men')}>
                 SHOP MEN
               </button>
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <button style={{ width: "150px", height: "60px" }}>
+              <button style={{ width: "150px", height: "60px" }}  onClick={()=>nav('/Women')}>
                 SHOP WOMEN 
               </button>
             </div>
@@ -77,7 +77,7 @@ function main1() {
           </div>
           <div className="col-md-5 col-12  pt-5">
             <h2 className="text-muted " >About us</h2>
-            <h1 style={{fontSize:'45px',fontWeight:'500' }}  >Selected materials  designed for comfort  and sustainability</h1>
+            <h1 style={{fontSize:'45px',fontWeight:'500' }} className="text-muted "  >Selected materials  designed for comfort  and sustainability</h1>
             <p className="fs-5">typesetting industry.
              but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,</p>
              <br /><button style={{width:'150px' ,height:'50px'}}>read more</button>
@@ -98,8 +98,8 @@ function main1() {
         {
           saleshoe.map((x) => {
             return (
-              <div onClick={() => { nav(`/details/${x.id}`) }} className='col-lg-4 col-6'>
-                <Card style={{ maxwidth: '48rem'  }} >
+              <div onClick={() => { nav(`/details/${x.id}`) }} className='col-lg-4 col-6 mt-3'>
+                <Card style={{ maxwidth: '48rem'  }}  className='hovereffect' >
                   <Card.Img variant="top" src={x.Image} />
                   <Card.Body>
                     <Card.Title>{x.name}</Card.Title>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function adminmain() {
   const nav = useNavigate();
@@ -23,12 +24,12 @@ function adminmain() {
         </h3>
       </div>
       <div className="col ">
-        <div className="text-center " style={{ height: "15%" }}>
+        <div className="text-center pd-5" >
           <h1>Hello Admin</h1>
 
-          <button onClick={() => nav("/login")} className="float-end">
+          <Button onClick={() => nav("/login")} className="float-end">
             logout
-          </button>
+          </Button>
         </div>
         <div className="h-75">
           <Outlet />

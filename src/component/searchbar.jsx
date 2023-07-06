@@ -1,107 +1,61 @@
-
-import { useContext, useState } from 'react'
-import { Card, Button } from 'react-bootstrap';
-import { Context } from '../context/context';
+import { useContext, useState } from "react";
+import { Dropdown, Image} from "react-bootstrap";
+import { Context } from "../context/context";
+import { Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 function searchbar() {
-    const productData = useContext(Context)
+  const productData = useContext(Context);
+  const nav=useNavigate()
 
-    const { product } = productData
-    const [state, setstate] = useState([])
-    // const dis = prod.filter((a,) => {
-    //     return a.type == b
-    // })
-    const search = (event) => {
-        const b = event.target.value
+  const { product } = productData;
+  const [searchstate, searchsetstate] = useState([]);
+ 
+  const search = (event) => {
+    const typingvalue = event.target.value.toLowerCase();
+    console.log(product);
 
-        var value = product.filter((a) => {
+    var value = product.filter(
+      (prd) => prd.name.toLowerCase().slice(0, typingvalue.length) == typingvalue
+    );
+   searchsetstate(value);
+  };
+
+  return (
+    <div>
+       <Dropdown>
+      <Dropdown.Toggle className="border-0" style={{background:'transparent'}} >
+      <Form className="d-flex">
+          <Form.Control
+            type="search"
+            placeholder="Search"
+            className="me-2"
+            aria-label="Search"
+            onChange={search}
+          />
+         
+        </Form>
+        
+      </Dropdown.Toggle>
+
+   
+        
+     
+              <Dropdown.Menu>
+        {searchstate.map((x) => {
+          return (
+                <Dropdown.Item href="#/action-1" onClick={()=>nav(`/details/${x.id}`)} > <Image src={x.Image} rounded  className="w-25"/>{x.name}</Dropdown.Item>
+               
+                );
+              })}
+              </Dropdown.Menu>
+
             
-            for(let i=0;i<10;i++){
-                console.log(a.name.charAt(i));
-                // console.log(b.charAt(i));
+        </Dropdown>
+      </div>
 
-            if( a.name.charAt(i) === b.charAt(i)){
-              let g=a.name.charAt(i)
-                return g
-            }
-           
-            }
-        })
-        setstate(value)
-
-
-    }
-
-
-    return (
-        <div>
-
-            <div className='d-flex'>  
-             <form action="" >
-                <h1 style={{ textAlign: 'center' }}>Search</h1>
-
-                <input type="text"
-                    style={{
-                        width: '500px',
-                        height: '50px',
-                        borderRadius: '20px'
-                    }}
-                    name="" id="sear" onChange={search} />
-                <button
-                    style={{
-                        width: '70px',
-                        height: '40px',
-                        borderRadius: '20px'
-                    }}
-                >search</button>
-
-
-            </form>
-                &nbsp;
-
-                <button
-                    onClick={() => { setstate([]) }}
-                    style={{
-                        width: '70px',
-                        height: '40px',
-                        marginTop: '60px',
-                        borderRadius: '20px',
-                        color: '#fff',
-                        background: 'red'
-
-                    }}
-                >clear</button>
-
-            </div>
-            <div className='d-flex col-md-6'>
-
-
-                {
-                    state.map((x) => {
-                        return (
-                            <>
-
-                                <Card style={{ width: '28rem' }}>
-                                    <Card.Img variant="top" src={x.Image} />
-                                    <Card.Body>
-                                        <Card.Title>{x.name}</Card.Title>
-                                        <Card.Text>
-                                            {x.price}
-                                        </Card.Text>
-                                        <Button variant="primary">Go somewhere</Button>
-                                    </Card.Body>
-                                </Card>
-                            </>
-                        )
-
-
-                    })
-                }
-            </div>
-
-        </div>
-    )
+  );
 }
 
-export default searchbar
+export default searchbar;

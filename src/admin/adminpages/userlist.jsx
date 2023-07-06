@@ -8,7 +8,8 @@ function userlist() {
     const {userState}=userlist
   return (
     <div>
-        <div>
+        <div className='container mt-5'>
+
             {
                 userState.map((x)=>{
                     return(

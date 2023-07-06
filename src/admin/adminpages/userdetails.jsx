@@ -17,14 +17,15 @@ function userdetails() {
 
   return (
     <div className='text-center'>
+      <div className='container mt-5'>
        { userinfo.map((x)=>{
         return(
             <Card >
-            <Card.Header> <h1> {x.user}</h1></Card.Header>
+            <Card.Header> <h1> <label htmlFor="">USER NAME:</label> {x.user}</h1></Card.Header>
             <ListGroup variant="flush">
-              <ListGroup.Item><h2> {x.fname}{x.lname}</h2></ListGroup.Item>
-              <ListGroup.Item><h2>  {x.email}</h2></ListGroup.Item>
-              <ListGroup.Item> <h2> {x.pwd}</h2></ListGroup.Item>
+              <ListGroup.Item><h2><label htmlFor="">USER FULL NAME:</label> {x.fname}{x.lname}</h2></ListGroup.Item>
+              <ListGroup.Item><h2> <label htmlFor="">USER EMAIL:</label> {x.email}</h2></ListGroup.Item>
+              <ListGroup.Item> <h2><label htmlFor="">USER PASSWORD:</label> {x.pwd}</h2></ListGroup.Item>
 
             </ListGroup>
 
@@ -65,6 +66,7 @@ function userdetails() {
 
        })
 }
+    </div>
     </div>
   )
 }

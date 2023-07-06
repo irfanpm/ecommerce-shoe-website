@@ -6,9 +6,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Context } from '../../context/context';
 
 
+
 const shoedetails = () => {
   const userProduct = useContext(Context)
-  const { product } = userProduct
+  const { product,userId } = userProduct
   const { pid } = useParams()
   const nav = useNavigate()
 
@@ -37,7 +38,7 @@ const shoedetails = () => {
                         lectus enim eget eu et lobortis faucibus.Auctor eros suspendisse tellus venenatis sodales purus non pellentesque  
                        , nunc sit eu, enim</p>
                     </Card.Text>
-                    <Button onClick={() => { nav(`/cart/${x.id}`) }} variant="primary" >ADD TO CART</Button>
+                    <Button onClick={() => {userId!=''? nav(`/cart/${x.id}`) :alert('please login')}} variant="primary" >ADD TO CART</Button>
                   </Card.Body>
                 </div>
               </Card>
@@ -47,7 +48,7 @@ const shoedetails = () => {
         }
 
       </div>
-
+     
 
     </div>
   )

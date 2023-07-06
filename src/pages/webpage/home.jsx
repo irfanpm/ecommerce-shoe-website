@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '../../component/nav'
 import Main from '../../component/main1'
-import Search from '../../component/searchbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '../../component/footer';
 
@@ -17,6 +16,7 @@ function home() {
       <div className='col-md-12 '>
         <Nav />
       </div>
+     
 
       <div className=''>
         <Main />
