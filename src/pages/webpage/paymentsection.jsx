@@ -16,7 +16,8 @@ function paymentsection() {
   return (
     <>
     <Nav/>
-    <div className=' container p-5 d-flex'>
+    <div className=' container p-5 '>
+      <div className='row'>
       <div className=' col-md-6 mt-5'>
         <h3>order summery</h3><br />
 
@@ -31,9 +32,9 @@ function paymentsection() {
     </Card>
 
         </div>
-        <div className='col-md-6 mt-5 ms-5'>
+        <div className='col-md-6 mt-5 '>
           <h3>select payment method</h3>
-          <Card style={{ width: '38rem' }}>
+          <Card >
       <Card.Body>
         <Card.Text>
 
@@ -62,6 +63,7 @@ function paymentsection() {
         </div>
         <div>
 
+        </div>
         </div>
     </div></>
   )
