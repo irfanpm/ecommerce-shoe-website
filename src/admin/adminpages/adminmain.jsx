@@ -7,8 +7,8 @@ function adminmain() {
   return (
     <div className="row h-100 ">
       <div
-        style={{ background: "black", maxWidth: "15rem" }}
-        className="col text-center "
+        style={{ background: "black" }}
+        className=" text-center w-25 col-12"
       >
         <h1 className="text-white">Admin</h1>
         <br />

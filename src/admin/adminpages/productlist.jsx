@@ -5,25 +5,25 @@ import { useNavigate } from "react-router-dom";
 
 function Productlist() {
   const { product, setProduct } = useContext(Context);
-  const [state, setstate] = useState([]);
+  const [catagory, setcatagory] = useState([]);
   const nav = useNavigate();
   const click1 = () => {
     const value = product.filter((x) => {
       return x.type == "men";
     });
 
-    setstate(value);
+    setcatagory(value);
   };
   const click2 = () => {
     const value = product.filter((x) => {
       return x.type == "women";
     });
-    setstate(value);
+    setcatagory(value);
   };
   const click3 = () => {
     const value = product;
 
-    setstate(value);
+    setcatagory(value);
   };
 
   return (
@@ -45,30 +45,36 @@ function Productlist() {
         </div>
         <br />
         <br />
-        <button onClick={click1} className="col-3">
+        <button onClick={click1} className="col-md-3 col-12">
           men
         </button>
-        <button onClick={click2} className="col-3">
+        <button onClick={click2} className="col-md-3 col-12">
           women
         </button>
-        <button onClick={click3} className="col-3">
+        <button onClick={click3} className="col-md-3 col-12">
           all
         </button>
-          {state.map((x, i) => {
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          {catagory.map((x, i) => {
             return (
-              <div  className="w-75 h-25" >
-                <Card>
-                  <Card.Body className="d-flex" onClick={() => nav(`/admin/productdetails/${x.id}`)}>
-                  <Card.Img  className="w-25" src={x.Image} />
+               
+              <div  className="w-75 h-25  " >
+                <Card className="hovereffect ">
+                  <Card.Body  onClick={() => nav(`/admin/productdetails/${x.id}`)}>
+                  <Card.Img style={{height:'100px',maxWidth:'100px' }} src={x.Image} />
 
                     <Card.Title>  {x.name}</Card.Title>
                   </Card.Body>
                   <Button
                   onClick={() => {
                     setProduct(product.filter((y) => y.id != x.id));
-                    setstate(state.filter((x, j) => j != i));
+                    setcatagory(catagory.filter((x, j) => j != i));
                   }}
-                  className="w-25 "
+                  className=" btn btn-danger col-12 "
+                  style={{width:'80px'}} 
                 >
                   delete
                 </Button>
@@ -77,8 +83,8 @@ function Productlist() {
               </div>
             );
           })}
-        </div>
-      </div>
+          </div></div>
+       
     </div>
   );
 }

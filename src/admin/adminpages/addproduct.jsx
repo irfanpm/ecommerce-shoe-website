@@ -29,9 +29,9 @@ function addproduct() {
     event.target.reset();
   };
   return (
-    <div>
-      <div className=" container" >
-        <Card className="   p-4  " style={{ width: "25rem" }}>
+    <div className="mt-5 container w-75">
+      <div className="   pt-5" >
+        <Card className="   p-4 w-100" >
           <h1 style={{ textAlign: "center" }}>Add product</h1> <br />
           <br />
           <form className="d-flex flex-column " onSubmit={submit}>
@@ -87,7 +87,7 @@ function addproduct() {
 
             <br />
 
-            <Button variant="primary" type="submit" className="w-25">
+            <Button variant="primary" type="submit" >
               Submit
             </Button>
           </form>

@@ -23,17 +23,16 @@ function Register() {
 
             alert('already this username')
         }
-        // }else if(Pwd.length<7){
+        else if(Pwd.length<7){
 
-        //     alert('the password must have 8 letter')
-        // }
+            alert('the password must have 8 letter')
+        }
         else {
 
 
         setuserState([...userState, { id: Math.random(), fname: Fname, lname: Lname, user: User, email: Email, pwd: Pwd, prd: [] }])
 
 
-        console.log(userState)
 
         nav('/login')
         }

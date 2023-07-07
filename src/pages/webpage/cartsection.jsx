@@ -148,7 +148,7 @@ function cartsection() {
                 </Card.Text>
                 <h2> </h2>
 
-                <button variant="primary" onClick={() => dele(cartindex)}>delete  </button>
+                <Button variant="primary"  className='btn btn-danger' onClick={() => dele(cartindex)}>delete  </Button>
 
               </Card.Body>
             </Card></div>)

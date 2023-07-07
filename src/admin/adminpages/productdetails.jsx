@@ -15,12 +15,12 @@ function productdetails() {
 
 
   return (
-    <div className='d-flex justify-content-center'>
+    <div className='d-flex justify-content-center container mt-5'>
       {
         productinfo.map((x) => {
           return (
             <>
-              <Card style={{ width: '28rem' }}>
+              <Card className='w-100'>
                 <Card.Img variant="top" src={x.Image} />
                 <Card.Body>
                   <Button onClick={() => sett(a => !a)}>edit</Button>

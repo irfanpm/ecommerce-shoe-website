@@ -17,6 +17,7 @@ function login() {
     const mail = event.target.email.value;
     const pas = event.target.pwd.value;
     if (pas == "admin" || mail == "admin") {
+      setId('admin')
       nav("/admin");
     } else {
       const value = userState.filter((x) => {

@@ -60,7 +60,7 @@ function App() {
 
 
 
-      <Route path='/admin' element={< Admin/>}>
+      <Route path='/admin' element={userId=='admin'?< Admin/>:<Login/>}>
       <Route index element={< Userlist/>}/>
        <Route path='userlist' element={< Userlist/>}/> 
        <Route path='productlist' element={< Productlist/>}/> 

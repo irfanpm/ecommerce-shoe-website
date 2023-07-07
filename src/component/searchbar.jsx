@@ -14,7 +14,6 @@ function searchbar() {
  
   const search = (event) => {
     const typingvalue = event.target.value.toLowerCase();
-    console.log(product);
 
     var value = product.filter(
       (prd) => prd.name.toLowerCase().slice(0, typingvalue.length) == typingvalue
